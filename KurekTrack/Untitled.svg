@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rounded background -->
+  <rect width="1024" height="1024" rx="220" fill="#0B1E3A"/>
+  <!-- Waves -->
+  <path d="M160 700 C 240 660, 320 740, 400 700 C 480 660, 560 740, 640 700 C 720 660, 800 740, 880 700"
+        fill="none" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round"/>
+  <path d="M160 760 C 240 720, 320 800, 400 760 C 480 720, 560 800, 640 760 C 720 720, 800 800, 880 760"
+        fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" opacity="0.85"/>
+  <!-- Boat hull (minimal triangle outline) -->
+  <path d="M512 300 L 570 460 L 454 460 Z" fill="none" stroke="#FFFFFF" stroke-width="28" stroke-linejoin="round"/>
+  <!-- Mast/seat -->
+  <line x1="512" y1="460" x2="512" y2="560" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round" opacity="0.95"/>
+  <!-- Oars (crossed) -->
+  <g stroke="#FFFFFF" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="470" y1="520" x2="320" y2="640"/>
+    <rect x="292" y="628" width="80" height="32" rx="6" fill="#FFFFFF"/>
+    <line x1="554" y1="520" x2="704" y2="640"/>
+    <rect x="704" y="628" width="80" height="32" rx="6" fill="#FFFFFF"/>
+  </g>
+</svg>
