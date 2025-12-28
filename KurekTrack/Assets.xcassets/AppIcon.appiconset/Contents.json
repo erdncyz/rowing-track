@@ -3,17 +3,8 @@
     {
       "filename" : "AppIcon.png",
       "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "AppIcon 1.png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "AppIcon 2.png",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "platform" : "ios",
+      "size" : "1024x1024"
     }
   ],
   "info" : {
