@@ -160,9 +160,12 @@ final class HistoryManager: ObservableObject {
 }
 
 // MARK: - History View
+// MARK: - History View
 struct HistoryView: View {
     @ObservedObject var historyManager: HistoryManager
     @Environment(\.dismiss) private var dismiss
+    @State private var workoutToDelete: WorkoutRecord?
+    @State private var showDeleteAlert = false
     
     var body: some View {
         NavigationStack {
@@ -188,7 +191,16 @@ struct HistoryView: View {
                             
                             // Antrenman listesi
                             ForEach(historyManager.workouts) { workout in
-                                WorkoutCard(workout: workout)
+                                WorkoutCard(workout: workout) {
+                                    confirmDelete(workout)
+                                }
+                                .contextMenu {
+                                    Button(role: .destructive) {
+                                        historyManager.deleteWorkout(workout)
+                                    } label: {
+                                        Label("Sil", systemImage: "trash")
+                                    }
+                                }
                             }
                         }
                         .padding()
@@ -206,7 +218,24 @@ struct HistoryView: View {
                 }
             }
             .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
+            .alert("Antrenmanı Sil", isPresented: $showDeleteAlert) {
+                Button("Vazgeç", role: .cancel) {}
+                Button("Sil", role: .destructive) {
+                    if let workout = workoutToDelete {
+                        withAnimation {
+                            historyManager.deleteWorkout(workout)
+                        }
+                    }
+                }
+            } message: {
+                Text("Bu antrenman kaydını silmek istediğinizden emin misiniz?")
+            }
         }
+    }
+    
+    private func confirmDelete(_ workout: WorkoutRecord) {
+        workoutToDelete = workout
+        showDeleteAlert = true
     }
     
     private var emptyStateView: some View {
@@ -305,6 +334,7 @@ struct SummaryItem: View {
 
 struct WorkoutCard: View {
     let workout: WorkoutRecord
+    let onDelete: () -> Void
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -318,8 +348,11 @@ struct WorkoutCard: View {
                 
                 Spacer()
                 
-                Image(systemName: "figure.rowing")
-                    .foregroundColor(.cyan)
+                Button(action: onDelete) {
+                    Image(systemName: "trash")
+                        .foregroundColor(.red.opacity(0.8))
+                        .padding(4)
+                }
             }
             
             Divider()
