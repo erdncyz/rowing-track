@@ -37,10 +37,10 @@
 	<array>
 		<dict>
 			<key>NSPrivacyAccessedAPIType</key>
-			<string>NSPrivacyAccessedAPICategoryFileTimestampAPIs</string>
+			<string>NSPrivacyAccessedAPICategoryFileTimestamp</string>
 			<key>NSPrivacyAccessedAPITypeReasons</key>
 			<array>
-				<string>NSPrivacyAccessedAPICategoryReasonAppFunctionality</string>
+				<string>C617.1</string>
 			</array>
 		</dict>
 		<dict>
@@ -48,7 +48,7 @@
 			<string>NSPrivacyAccessedAPICategoryUserDefaults</string>
 			<key>NSPrivacyAccessedAPITypeReasons</key>
 			<array>
-				<string>NSPrivacyAccessedAPICategoryReasonAppFunctionality</string>
+				<string>CA92.1</string>
 			</array>
 		</dict>
 	</array>
