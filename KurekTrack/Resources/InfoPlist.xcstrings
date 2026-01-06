@@ -1,0 +1,23 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "NSLocationWhenInUseUsageDescription" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Location access is required to accurately measure your rowing distance, calculate speed metrics, display your route on the map, and record split times during your workout sessions."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kürek mesafenizi doğru bir şekilde ölçmek, hız ölçümlerini hesaplamak, rotanızı haritada görüntülemek ve antrenman sırasında tur zamanlarını kaydetmek için konum erişimi gereklidir."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
