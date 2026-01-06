@@ -1356,13 +1356,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Allow"
+            "value" : "Continue"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "İzin Ver"
+            "value" : "Devam Et"
           }
         }
       }
