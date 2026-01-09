@@ -1169,7 +1169,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Interval"
+            "value" : "Aralıklı Antrenman"
           }
         }
       }
@@ -1833,7 +1833,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Split Zamanları"
+            "value" : "500m Ara Zamanları (Split)"
           }
         }
       }
@@ -1917,7 +1917,7 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Splitler"
+            "value" : "Ara Zamanlar"
           }
         }
       }
